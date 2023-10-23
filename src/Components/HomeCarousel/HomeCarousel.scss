@@ -1,0 +1,7 @@
+.HomeCarousel {
+    .slick-arrow {
+        &::before {
+            content: '';
+        }
+    }
+}
