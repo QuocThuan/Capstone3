@@ -3,12 +3,15 @@ import { useSelector } from "react-redux";
 import MovieItem from "../MovieItem/MovieItem";
 import { Carousel } from "antd";
 import "./listMovie.scss";
+import useResponsive from "../../hook/useResponsive";
 const ListMovie = () => {
   const { arrPhim } = useSelector((state) => state.phimSlice);
+  const windowSize = useResponsive();
+  console.log(windowSize);
   // console.log(arrPhim);
   return (
     <div className="container  py-10">
-      <h2 className="text-center font-bold text-2xl">Danh sách các phim</h2>
+      <h2 className={`text-center font-bold text-2xl ${windowSize.widthWindow < 576 ? 'text-red-500' : ''}`}>Danh sách các phim</h2>
       <Carousel
         rows={2}
         slidesToShow={4}

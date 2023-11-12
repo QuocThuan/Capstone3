@@ -4,6 +4,7 @@ import UserTemplate from "./templates/UserTemplate/UserTemplate";
 import Login from "./pages/Login/Login.js";
 import AdminTemple from "./templates/AdminTemple/AdminTemple";
 import MangerMovie from "./pages/MangerMovie/MangerMovie";
+import ManagerAddMovie from "./pages/ManagerAddMovie/ManagerAddMovie";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminTemple />}>
           <Route path="manager-movie" element={<MangerMovie />} />
+          <Route path="manager-add-movie" element={<ManagerAddMovie />} />
         </Route>
         <Route path="/sign-in" element={<Login />} />
       </Routes>

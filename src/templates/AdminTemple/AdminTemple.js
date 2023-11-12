@@ -12,6 +12,20 @@ const { Header, Content, Footer, Sider } = Layout;
 const AdminTemple = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // gọi dữ liệu từ localStoge và kiểm tra 
+    const dataUser = JSON.parse(localStorage.getItem('userLogin'))
+    if (dataUser) {
+      if (dataUser.maLoaiNguoiDung !== 'QuanTri') {
+        window.location.href = 'http://google.com'
+      }
+    } else {
+      window.location.href = 'http://google.com'
+    }
+  }, [])
+
+
   let [selectedKey, setSelectedKey] = useState([]);
 
   useEffect(() => {
@@ -30,7 +44,7 @@ const AdminTemple = () => {
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={(broken) => {
-          console.log(broken);
+          // console.log(broken);
         }}
       >
         <div className="demo-logo-vertical" />

@@ -10,7 +10,6 @@ const TabCumRap = ({ maHeThongRap }) => {
     quanLyRapServ
       .getLayThongTinLichChieu(maHeThongRap)
       .then((res) => {
-        console.log(res);
         // Lấy danh sách các cụm rạp của 1 hệ thống rạp và lưu vào state
         setCumRap(res.data.content[0].lstCumRap);
       })
@@ -38,7 +37,6 @@ const TabCumRap = ({ maHeThongRap }) => {
         }}
         className="tabCumRap"
         items={cumRap.map((item, index) => {
-          console.log(item);
           return {
             label: (
               <div className="text-left w-full ">

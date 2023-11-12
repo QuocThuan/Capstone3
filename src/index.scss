@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-add-movie [type='button'] {
+    background-color: rgba(0,0,0,0.25);
+}
+
+.form-add-movie .ant-switch-checked {
+    background-color: #4096ff;
+}
