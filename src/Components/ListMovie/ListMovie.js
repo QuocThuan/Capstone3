@@ -21,7 +21,7 @@ const ListMovie = () => {
       >
         {arrPhim.map((item, index) => {
           return (
-            <div className="p-5" key={index}>
+            <div className="p-5 h-[548px] mb-3" key={index}>
               <MovieItem movie={item} />
             </div>
           );

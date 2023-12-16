@@ -17,7 +17,7 @@ const Home = () => {
     <div>
       <HomeCarousel />
       <ListMovie />
-      <div className="container py-10">
+      <div className="container py-5">
         <h2 className="text-2xl font-bold text-center">Lịch chiếu</h2>
         <TabHeThongRap />
       </div>

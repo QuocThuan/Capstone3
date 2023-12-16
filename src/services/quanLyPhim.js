@@ -13,5 +13,4 @@ export const quanLyPhimServ = {
   themPhim: (frm) => {
     return https.post('/api/QuanLyPhim/ThemPhimUploadHinh', frm);
   }
-
 };

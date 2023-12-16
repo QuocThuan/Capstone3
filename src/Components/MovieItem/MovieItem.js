@@ -13,6 +13,7 @@ const MovieItem = ({ movie }) => {
         {tenPhim}
       </h3>
       <p className="line-clamp-2">{moTa}</p>
+      <button className="bg-green-400 px-4 py-2">Đặt vé</button>
     </div>
   );
 };
